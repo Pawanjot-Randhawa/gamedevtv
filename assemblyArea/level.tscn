@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bffs0yqr2jdrx"]
+
+[ext_resource type="PackedScene" uid="uid://byque4w54oowj" path="res://Player/player.tscn" id="1_wlgn2"]
+[ext_resource type="PackedScene" uid="uid://c1t72k6odd4xv" path="res://wall.tscn" id="2_m8vf4"]
+[ext_resource type="PackedScene" uid="uid://bxwnpgjxhnte3" path="res://draggable_item.tscn" id="3_krlfu"]
+
+[node name="level" type="Node2D" unique_id=1512950284]
+
+[node name="Player" parent="." unique_id=1991989628 instance=ExtResource("1_wlgn2")]
+position = Vector2(5, 9)
+
+[node name="Wall" parent="." unique_id=882297613 instance=ExtResource("2_m8vf4")]
+position = Vector2(503, 2)
+
+[node name="Wall2" parent="." unique_id=1233996499 instance=ExtResource("2_m8vf4")]
+position = Vector2(-45, -250)
+
+[node name="Wall3" parent="." unique_id=367415808 instance=ExtResource("2_m8vf4")]
+position = Vector2(-382, 184)
+
+[node name="DraggableItem" parent="." unique_id=1279362372 instance=ExtResource("3_krlfu")]
+position = Vector2(222, -111)

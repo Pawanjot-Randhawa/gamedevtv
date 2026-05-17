@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const SPEED = 500.0
+#const JUMP_VELOCITY = -400.0
 
 
 func _physics_process(delta: float) -> void:
@@ -16,7 +16,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = direction.y * SPEED
 	else:
 		#If we are not moving, the velcoity should move towards 0
-		velocity.x = move_toward(velocity.x, 0, 50)
-		velocity.y = move_toward(velocity.y, 0, 50)
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.y = move_toward(velocity.y, 0, SPEED)
 	#Move and slide uses velcoity to move our guy
 	move_and_slide()
