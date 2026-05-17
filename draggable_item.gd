@@ -39,12 +39,18 @@ func check_for_snap() -> void:
 	
 	if overlap.size()>0:
 		snap_to_player(overlap[0])
-
+	
 func snap_to_player(socket: Area2D) -> void:
 	is_dragging = false
 	is_attached = true
-	collision_shape_2d.disabled=true
 	
+	var socket_shape = socket.get_node_or_null("CollisionShape2D")
+	collision_shape_2d.disabled=true
 	reparent(socket)
-	var tween= create_tween()
-	tween.tween_property(self,"position",Vector2.ZERO,0.1).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+	
+	var location = socket.position
+	if socket_shape:
+		print("found")
+		location = socket_shape.position
+	var tween = create_tween()
+	tween.tween_property(self,"position",Vector2(location),0.1).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
