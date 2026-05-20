@@ -3,7 +3,7 @@ extends CharacterBody2D
 var is_dragging: bool = false
 var is_attached: bool = false
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
-@onready var bottom_detector: Area2D = $BottomDetector
+@onready var plug: Plug = $Plug
 
 
 # For CharacterBody2D, ensure 'input_pickable' is enabled in the Inspector
@@ -35,22 +35,10 @@ func _physics_process(delta: float) -> void:
 		velocity = Vector2.ZERO
 
 func check_for_snap() -> void:
-	var overlap = bottom_detector.get_overlapping_areas()
+	var overlap = plug.get_overlapping_areas()
 	
 	if overlap.size()>0:
-		snap_to_player(overlap[0])
-	
-func snap_to_player(socket: Area2D) -> void:
-	is_dragging = false
-	is_attached = true
-	
-	var socket_shape = socket.get_node_or_null("CollisionShape2D")
-	collision_shape_2d.disabled=true
-	reparent(socket)
-	
-	var location = socket.position
-	if socket_shape:
-		print("found")
-		location = socket_shape.position
-	var tween = create_tween()
-	tween.tween_property(self,"position",Vector2(location),0.1).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+		is_dragging = false
+		is_attached = true
+		collision_shape_2d.disabled=true
+		plug.connect_to_socket(overlap[0])

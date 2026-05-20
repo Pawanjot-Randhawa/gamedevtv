@@ -2,13 +2,10 @@
 
 [ext_resource type="Script" uid="uid://batafhm05bnuw" path="res://Player/player.gd" id="1_l8h54"]
 [ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="2_4ntmi"]
+[ext_resource type="PackedScene" uid="uid://dhxkorp3qahlr" path="res://Componets/socket.tscn" id="3_btcbx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ntmi"]
 size = Vector2(128, 126)
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4ntmi"]
-radius = 12.0
-height = 44.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1991989628]
 script = ExtResource("1_l8h54")
@@ -21,11 +18,16 @@ shape = SubResource("RectangleShape2D_4ntmi")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2102302182]
 
-[node name="RightSocket" type="Area2D" parent="." unique_id=342941529]
-collision_layer = 4
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RightSocket" unique_id=1986535532]
+[node name="Socket" parent="." unique_id=2061934646 instance=ExtResource("3_btcbx")]
 position = Vector2(64, 0)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_4ntmi")
+rotation = -1.5707964
+
+[node name="Socket2" parent="." unique_id=56438415 instance=ExtResource("3_btcbx")]
+position = Vector2(-64, 0)
+rotation = -1.5707964
+
+[node name="Socket3" parent="." unique_id=215593464 instance=ExtResource("3_btcbx")]
+position = Vector2(0, -64)
+
+[node name="Socket4" parent="." unique_id=250659137 instance=ExtResource("3_btcbx")]
+position = Vector2(0, 64)

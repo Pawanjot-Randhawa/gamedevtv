@@ -20,3 +20,24 @@ position = Vector2(-382, 184)
 
 [node name="DraggableItem" parent="." unique_id=1279362372 instance=ExtResource("3_krlfu")]
 position = Vector2(222, -111)
+
+[node name="DraggableItem2" parent="." unique_id=312788861 instance=ExtResource("3_krlfu")]
+position = Vector2(-284, -111)
+
+[node name="DraggableItem3" parent="." unique_id=414125919 instance=ExtResource("3_krlfu")]
+position = Vector2(-186, 152)
+
+[node name="DraggableItem4" parent="." unique_id=1691411506 instance=ExtResource("3_krlfu")]
+position = Vector2(119, 238)
+
+[node name="DraggableItem5" parent="." unique_id=1377220331 instance=ExtResource("3_krlfu")]
+position = Vector2(286, 73)
+
+[node name="DraggableItem6" parent="." unique_id=650806458 instance=ExtResource("3_krlfu")]
+position = Vector2(399, 238)
+
+[node name="DraggableItem7" parent="." unique_id=941178548 instance=ExtResource("3_krlfu")]
+position = Vector2(-59, 238)
+
+[node name="DraggableItem8" parent="." unique_id=1724868207 instance=ExtResource("3_krlfu")]
+position = Vector2(-446, 23)
