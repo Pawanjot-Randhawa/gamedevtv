@@ -9,6 +9,7 @@
 size = Vector2(128, 64)
 
 [node name="DraggableItem" type="CharacterBody2D" unique_id=312788861]
+collision_layer = 4
 collision_mask = 4
 input_pickable = true
 script = ExtResource("2_0ierq")

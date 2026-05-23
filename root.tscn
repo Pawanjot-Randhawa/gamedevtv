@@ -1,9 +1,14 @@
 [gd_scene format=3 uid="uid://j5ylltbkvldv"]
 
 [ext_resource type="Script" uid="uid://jh8mrxa17mjo" path="res://root.gd" id="1_pq8q7"]
-[ext_resource type="PackedScene" uid="uid://byque4w54oowj" path="res://Player/player.tscn" id="2_pyidc"]
+[ext_resource type="PackedScene" uid="uid://bffs0yqr2jdrx" path="res://assemblyArea/level.tscn" id="2_pyidc"]
 
 [node name="root" type="Node" unique_id=1686647730]
 script = ExtResource("1_pq8q7")
 
-[node name="Player" parent="." unique_id=1991989628 instance=ExtResource("2_pyidc")]
+[node name="level" parent="." unique_id=1512950284 instance=ExtResource("2_pyidc")]
+
+[node name="DraggableItem2" parent="level" index="5" unique_id=312788861]
+position = Vector2(-213, -128)
+
+[editable path="level"]
