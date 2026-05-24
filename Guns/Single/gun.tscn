@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bj1fwdi0ljtnk"]
+
+[ext_resource type="Script" uid="uid://b55m28gfoy4jy" path="res://Guns/Single/gun.gd" id="1_1q0sl"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_hk4kp"]
+size = Vector2(40, 100)
+
+[sub_resource type="QuadMesh" id="QuadMesh_1q0sl"]
+size = Vector2(40, 20)
+
+[node name="Gun" type="Node2D" unique_id=672512490]
+script = ExtResource("1_1q0sl")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=2118751101]
+modulate = Color(0.5132329, 0.5132329, 0.5132329, 1)
+mesh = SubResource("QuadMesh_hk4kp")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=593389283]
+modulate = Color(0.93699604, 0.22654024, 0, 1)
+position = Vector2(0, -40)
+mesh = SubResource("QuadMesh_1q0sl")
+
+[node name="ShootTimer" type="Timer" parent="." unique_id=1004079976]
+
+[connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]

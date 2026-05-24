@@ -8,7 +8,7 @@ script = ExtResource("1_pq8q7")
 
 [node name="level" parent="." unique_id=1512950284 instance=ExtResource("2_pyidc")]
 
-[node name="DraggableItem2" parent="level" index="5" unique_id=312788861]
+[node name="DraggableItem2" parent="level" index="4" unique_id=312788861]
 position = Vector2(-213, -128)
 
 [editable path="level"]

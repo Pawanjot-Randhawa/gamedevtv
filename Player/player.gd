@@ -32,4 +32,5 @@ func _physics_process(delta: float) -> void:
 	#Adjust roation based on vector
 	rotation += rotation_direction * ROTATION_SPEED * delta
 	#Move and slide uses velcoity to move our guy
+	print(velocity)
 	move_and_slide()

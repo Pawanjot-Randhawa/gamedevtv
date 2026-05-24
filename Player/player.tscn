@@ -20,16 +20,20 @@ shape = SubResource("RectangleShape2D_4ntmi")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2102302182]
 
-[node name="Socket" parent="." unique_id=2061934646 instance=ExtResource("3_btcbx")]
+[node name="RIGHTSocket" parent="." unique_id=2061934646 instance=ExtResource("3_btcbx")]
 position = Vector2(64, 0)
 rotation = -1.5707964
+NAME = "RIGHT"
 
-[node name="Socket2" parent="." unique_id=56438415 instance=ExtResource("3_btcbx")]
+[node name="LEFTSocket" parent="." unique_id=56438415 instance=ExtResource("3_btcbx")]
 position = Vector2(-64, 0)
 rotation = -1.5707964
+NAME = "LEFT"
 
-[node name="Socket3" parent="." unique_id=215593464 instance=ExtResource("3_btcbx")]
+[node name="UPSocket" parent="." unique_id=215593464 instance=ExtResource("3_btcbx")]
 position = Vector2(0, -64)
+NAME = "UP"
 
-[node name="Socket4" parent="." unique_id=250659137 instance=ExtResource("3_btcbx")]
+[node name="DOWNSocket" parent="." unique_id=250659137 instance=ExtResource("3_btcbx")]
 position = Vector2(0, 64)
+NAME = "DOWN"
