@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://2yviwvi821rn"]
+
+[ext_resource type="Script" uid="uid://hhp5fbfxk4ed" path="res://Guns/Deluxe/flame_deluxe.gd" id="1_5kt83"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_y3ma2"]
+size = Vector2(40, 20)
+
+[sub_resource type="QuadMesh" id="QuadMesh_5kt83"]
+size = Vector2(30, 10)
+
+[sub_resource type="QuadMesh" id="QuadMesh_tuesx"]
+size = Vector2(10, 10)
+
+[sub_resource type="QuadMesh" id="QuadMesh_y8p30"]
+size = Vector2(40, 10)
+
+[sub_resource type="QuadMesh" id="QuadMesh_w7q86"]
+size = Vector2(120, 160)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tuesx"]
+size = Vector2(120, 160)
+
+[node name="flame_deluxe" type="Node2D" unique_id=216699577]
+script = ExtResource("1_5kt83")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=1966662034]
+modulate = Color(0.27752772, 0.27752772, 0.27752772, 1)
+position = Vector2(0, -10)
+mesh = SubResource("QuadMesh_y3ma2")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="." unique_id=1952904844]
+modulate = Color(0.7342014, 0.37848797, 0.2711217, 1)
+position = Vector2(0, -25)
+rotation = 0.0034223953
+mesh = SubResource("QuadMesh_5kt83")
+
+[node name="MeshInstance2D4" type="MeshInstance2D" parent="." unique_id=740671668]
+modulate = Color(0.6144887, 0.23329255, 1, 1)
+position = Vector2(0, -25)
+rotation = 0.0034223953
+mesh = SubResource("QuadMesh_tuesx")
+
+[node name="MeshInstance2D5" type="MeshInstance2D" parent="." unique_id=762519602]
+modulate = Color(0.6144887, 0.23329255, 1, 1)
+position = Vector2(3.7252903e-09, -10.000001)
+rotation = 0.0034223953
+mesh = SubResource("QuadMesh_y8p30")
+
+[node name="FireVisual" type="MeshInstance2D" parent="." unique_id=1641272646]
+modulate = Color(0.9384307, 0, 0.10741279, 1)
+position = Vector2(0, -110)
+mesh = SubResource("QuadMesh_w7q86")
+
+[node name="FireArea" type="Area2D" parent="." unique_id=298163862]
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="FireCollisson" type="CollisionShape2D" parent="FireArea" unique_id=1382643195]
+position = Vector2(0, -110)
+shape = SubResource("RectangleShape2D_tuesx")
+
+[connection signal="body_entered" from="FireArea" to="." method="_on_fire_area_body_entered"]

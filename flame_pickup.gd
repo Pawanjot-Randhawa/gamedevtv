@@ -1,34 +1,34 @@
 extends Area2D
 
-const SAW = preload("uid://cyksvvt0kyw1s")
+const FLAME = preload("uid://cyqp0kxmee1s0")
 const FLAME_SAW = preload("uid://7d40mnlew3no")
-const SAW_GUN = preload("uid://diwd6b36ng5cn")
-const SAW_DELUXE = preload("uid://b7164occ854v5")
+const FLAME_GUN = preload("uid://cglicmsxp2rf5")
+const FLAME_DELUXE = preload("uid://2yviwvi821rn")
+
 
 var part
-
 func _on_area_entered(area: Area2D) -> void:
 	if area is Socket:
-		var parts = area.connected_parts
+		var parts:Array = area.connected_parts
 		if parts:
 			if parts.size() == 1:
 				var part_name = parts.get(0)
-				if part_name.NAME == "FLAME":
+				if part_name.NAME == "SAW":
 					part = FLAME_SAW.instantiate()
 					area.upgrade_part()
 					area.connect_part(part)
 				elif part_name.NAME == "GUN":
-					part = SAW_GUN.instantiate()
+					part = FLAME_GUN.instantiate()
 					area.upgrade_part()
 					area.connect_part(part)
-				elif part_name.NAME == "SAW":
-					part = SAW_DELUXE.instantiate()
+				elif part_name.NAME == "FLAME":
+					part = FLAME_DELUXE.instantiate()
 					area.upgrade_part()
 					area.connect_part(part)
 				queue_free()
 			if parts.size() == 2:#FULL SOCKET
 				return
 		else:#No connected parts in this socket
-			part = SAW.instantiate()
+			part = FLAME.instantiate()
 			area.connect_part(part)
 			queue_free()

@@ -4,8 +4,6 @@ class_name  Player
 
 var SPEED = 500.0
 var ROTATION_SPEED = 2.0
-var POWER = 500
-var CHARGE_TIME = 2
 var HEALTH = 100
 
 var rotation_direction
@@ -32,5 +30,4 @@ func _physics_process(delta: float) -> void:
 	#Adjust roation based on vector
 	rotation += rotation_direction * ROTATION_SPEED * delta
 	#Move and slide uses velcoity to move our guy
-	print(velocity)
 	move_and_slide()

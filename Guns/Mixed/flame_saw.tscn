@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://7d40mnlew3no"]
+
+[ext_resource type="Script" uid="uid://bt25tpj0xg5ke" path="res://Guns/Mixed/flame_saw.gd" id="1_h0q32"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_3kn0w"]
+size = Vector2(40, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6q1jm"]
+size = Vector2(40, 100)
+
+[sub_resource type="QuadMesh" id="QuadMesh_8whio"]
+size = Vector2(20, 100)
+
+[node name="flame_saw" type="Area2D" unique_id=1606197486]
+collision_layer = 2
+collision_mask = 8
+script = ExtResource("1_h0q32")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1794805678]
+modulate = Color(0.5788502, 0.33649316, 0.23108026, 1)
+mesh = SubResource("QuadMesh_3kn0w")
+
+[node name="MeshShape2D" type="CollisionShape2D" parent="." unique_id=3420739]
+shape = SubResource("RectangleShape2D_6q1jm")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=2006610259]
+modulate = Color(0.73344004, 0, 0.17091444, 1)
+mesh = SubResource("QuadMesh_8whio")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

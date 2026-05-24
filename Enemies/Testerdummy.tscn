@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://c2hmjjiiinp61"]
+
+[ext_resource type="Script" uid="uid://oyqw54rgxk8t" path="res://Enemies/testerdummy.gd" id="1_sbfp2"]
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_y6omr"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_sbfp2"]
+size = Vector2(150, 150)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y6omr"]
+size = Vector2(150, 150)
+
+[node name="Testerdummy" type="CharacterBody2D" unique_id=826755300]
+collision_layer = 8
+collision_mask = 3
+script = ExtResource("1_sbfp2")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=504074697]
+mesh = SubResource("QuadMesh_sbfp2")
+texture = ExtResource("1_y6omr")
+
+[node name="Label" type="Label" parent="." unique_id=1830320761]
+offset_left = -73.0
+offset_top = -116.0
+offset_right = 71.0
+offset_bottom = -78.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Debug"
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2043430611]
+shape = SubResource("RectangleShape2D_y6omr")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=819161211]
+custom_minimum_size = Vector2(200, 50)
+offset_left = -101.0
+offset_top = -178.0
+offset_right = 99.0
+offset_bottom = -128.0
+max_value = 200.0
+value = 200.0
+rounded = true
+show_percentage = false

@@ -11,7 +11,7 @@ func _ready() -> void:
 func saw_tick() -> void:
 	if enemeis_in_range:
 		for enemy in enemeis_in_range:
-			enemy.take_damage(Stats.SAW_DAMAGE)
+			enemy.take_damage(Stats.SAW_DELUXE_DAMAGE)
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.has_method("take_damage"):

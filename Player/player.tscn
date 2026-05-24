@@ -22,7 +22,7 @@ shape = SubResource("RectangleShape2D_4ntmi")
 
 [node name="RIGHTSocket" parent="." unique_id=2061934646 instance=ExtResource("3_btcbx")]
 position = Vector2(64, 0)
-rotation = -1.5707964
+rotation = 1.5707964
 NAME = "RIGHT"
 
 [node name="LEFTSocket" parent="." unique_id=56438415 instance=ExtResource("3_btcbx")]
@@ -36,4 +36,5 @@ NAME = "UP"
 
 [node name="DOWNSocket" parent="." unique_id=250659137 instance=ExtResource("3_btcbx")]
 position = Vector2(0, 64)
+rotation = 3.1415927
 NAME = "DOWN"

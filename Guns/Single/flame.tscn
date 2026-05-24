@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://cyqp0kxmee1s0"]
+
+[ext_resource type="Script" uid="uid://75hyfvvkd54i" path="res://Guns/Single/flame.gd" id="1_h3rbl"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_35epi"]
+size = Vector2(40, 20)
+
+[sub_resource type="QuadMesh" id="QuadMesh_h3rbl"]
+size = Vector2(20, 10)
+
+[sub_resource type="QuadMesh" id="QuadMesh_43jia"]
+size = Vector2(80, 120)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uetwc"]
+size = Vector2(80, 120)
+
+[node name="Flame" type="Node2D" unique_id=2065774661]
+script = ExtResource("1_h3rbl")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=1820827710]
+modulate = Color(0.27752772, 0.27752772, 0.27752772, 1)
+position = Vector2(0, -10)
+mesh = SubResource("QuadMesh_35epi")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="." unique_id=1752882429]
+modulate = Color(0.7342014, 0.37848797, 0.2711217, 1)
+position = Vector2(0, -25)
+rotation = 0.0034223953
+mesh = SubResource("QuadMesh_h3rbl")
+
+[node name="FireVisual" type="MeshInstance2D" parent="." unique_id=549624036]
+modulate = Color(0.9384307, 0, 0.10741279, 1)
+position = Vector2(0, -90)
+mesh = SubResource("QuadMesh_43jia")
+
+[node name="FireArea" type="Area2D" parent="." unique_id=930732449]
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="FireCollisson" type="CollisionShape2D" parent="FireArea" unique_id=1088293766]
+position = Vector2(0, -90)
+shape = SubResource("RectangleShape2D_uetwc")
+
+[connection signal="body_entered" from="FireArea" to="." method="_on_area_2d_body_entered"]

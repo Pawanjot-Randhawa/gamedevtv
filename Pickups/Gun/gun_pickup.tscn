@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://4fn0r0cy5akp"]
+
+[ext_resource type="Script" uid="uid://kxb4r7tsh10y" path="res://gun_pickup.gd" id="1_uk5lb"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_ge5ys"]
+size = Vector2(50, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bwiwg"]
+size = Vector2(50, 50)
+
+[node name="GunPickup" type="Area2D" unique_id=684247242]
+collision_mask = 4
+script = ExtResource("1_uk5lb")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=106576047]
+modulate = Color(0.49130458, 0.37935364, 0.28662407, 1)
+mesh = SubResource("QuadMesh_ge5ys")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=423986892]
+shape = SubResource("RectangleShape2D_bwiwg")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

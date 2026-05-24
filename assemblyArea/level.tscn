@@ -1,22 +1,69 @@
 [gd_scene format=3 uid="uid://bffs0yqr2jdrx"]
 
 [ext_resource type="PackedScene" uid="uid://byque4w54oowj" path="res://Player/player.tscn" id="1_wlgn2"]
-[ext_resource type="PackedScene" uid="uid://c1t72k6odd4xv" path="res://wall.tscn" id="2_m8vf4"]
 [ext_resource type="PackedScene" uid="uid://bq8ptdc5f5o57" path="res://Pickups/Gun/saw_pickup.tscn" id="4_krlfu"]
+[ext_resource type="PackedScene" uid="uid://c2hmjjiiinp61" path="res://Enemies/Testerdummy.tscn" id="4_m8vf4"]
+[ext_resource type="PackedScene" uid="uid://4fn0r0cy5akp" path="res://Pickups/Gun/gun_pickup.tscn" id="5_krlfu"]
+[ext_resource type="PackedScene" uid="uid://dfhvrmll28alk" path="res://Pickups/Gun/flame_pickup.tscn" id="6_6pda2"]
 
 [node name="level" type="Node2D" unique_id=1512950284]
 
 [node name="Player" parent="." unique_id=1991989628 instance=ExtResource("1_wlgn2")]
 position = Vector2(5, 9)
 
-[node name="Wall" parent="." unique_id=882297613 instance=ExtResource("2_m8vf4")]
-position = Vector2(503, 2)
-
-[node name="Wall2" parent="." unique_id=1233996499 instance=ExtResource("2_m8vf4")]
-position = Vector2(-45, -250)
-
-[node name="Wall3" parent="." unique_id=367415808 instance=ExtResource("2_m8vf4")]
-position = Vector2(-382, 184)
-
 [node name="SawPickup" parent="." unique_id=761092200 instance=ExtResource("4_krlfu")]
 position = Vector2(-315, -136)
+
+[node name="SawPickup2" parent="." unique_id=1509952232 instance=ExtResource("4_krlfu")]
+position = Vector2(-522, -147)
+
+[node name="SawPickup3" parent="." unique_id=612343340 instance=ExtResource("4_krlfu")]
+position = Vector2(-272, -257)
+
+[node name="Testerdummy" parent="." unique_id=1281171326 instance=ExtResource("4_m8vf4")]
+position = Vector2(619, -385)
+
+[node name="Testerdummy2" parent="." unique_id=826755300 instance=ExtResource("4_m8vf4")]
+position = Vector2(910, -223)
+
+[node name="Testerdummy3" parent="." unique_id=875086652 instance=ExtResource("4_m8vf4")]
+position = Vector2(345, -385)
+
+[node name="GunPickup" parent="." unique_id=684247242 instance=ExtResource("5_krlfu")]
+position = Vector2(469, 237)
+
+[node name="GunPickup2" parent="." unique_id=1376266093 instance=ExtResource("5_krlfu")]
+position = Vector2(228, 289)
+
+[node name="GunPickup3" parent="." unique_id=2130132680 instance=ExtResource("5_krlfu")]
+position = Vector2(487, 350)
+
+[node name="flame_pickup" parent="." unique_id=2134229557 instance=ExtResource("6_6pda2")]
+position = Vector2(-238, 280)
+
+[node name="flame_pickup2" parent="." unique_id=413747522 instance=ExtResource("6_6pda2")]
+position = Vector2(-60, 404)
+
+[node name="flame_pickup3" parent="." unique_id=802625809 instance=ExtResource("6_6pda2")]
+position = Vector2(-361, 445)
+
+[node name="Label" type="Label" parent="." unique_id=640383921]
+offset_left = -409.0
+offset_top = -232.0
+offset_right = -369.0
+offset_bottom = -209.0
+text = "SAW"
+
+[node name="Label2" type="Label" parent="." unique_id=1781664661]
+offset_left = -245.0
+offset_top = 168.0
+offset_right = -205.0
+offset_bottom = 191.0
+text = "FLAME"
+
+[node name="Label3" type="Label" parent="." unique_id=703688046]
+offset_left = 337.0
+offset_top = 157.0
+offset_right = 389.0
+offset_bottom = 180.0
+text = "GUN"

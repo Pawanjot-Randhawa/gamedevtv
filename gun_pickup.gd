@@ -1,11 +1,21 @@
 extends Area2D
 
-const SAW = preload("uid://cyksvvt0kyw1s")
-const FLAME_SAW = preload("uid://7d40mnlew3no")
+const GUN = preload("uid://bj1fwdi0ljtnk")
+const FLAME_GUN = preload("uid://cglicmsxp2rf5")
 const SAW_GUN = preload("uid://diwd6b36ng5cn")
-const SAW_DELUXE = preload("uid://b7164occ854v5")
+const GUN_DELUXE = preload("uid://danmsw7nlenr4")
+
 
 var part
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
 
 func _on_area_entered(area: Area2D) -> void:
 	if area is Socket:
@@ -14,21 +24,21 @@ func _on_area_entered(area: Area2D) -> void:
 			if parts.size() == 1:
 				var part_name = parts.get(0)
 				if part_name.NAME == "FLAME":
-					part = FLAME_SAW.instantiate()
+					part = FLAME_GUN.instantiate()
 					area.upgrade_part()
 					area.connect_part(part)
 				elif part_name.NAME == "GUN":
-					part = SAW_GUN.instantiate()
+					part = GUN_DELUXE.instantiate()
 					area.upgrade_part()
 					area.connect_part(part)
 				elif part_name.NAME == "SAW":
-					part = SAW_DELUXE.instantiate()
+					part = SAW_GUN.instantiate()
 					area.upgrade_part()
 					area.connect_part(part)
 				queue_free()
 			if parts.size() == 2:#FULL SOCKET
 				return
 		else:#No connected parts in this socket
-			part = SAW.instantiate()
+			part = GUN.instantiate()
 			area.connect_part(part)
 			queue_free()

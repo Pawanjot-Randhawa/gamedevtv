@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://wj7f43hg72gd"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_w6jbp"]
+size = Vector2(30, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rm2jh"]
+size = Vector2(30, 30)
+
+[node name="PlayerUpgrade" type="Area2D" unique_id=1834820325]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=743571300]
+modulate = Color(0.34074172, 0.5625997, 9.62615e-07, 1)
+mesh = SubResource("QuadMesh_w6jbp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=810378396]
+shape = SubResource("RectangleShape2D_rm2jh")

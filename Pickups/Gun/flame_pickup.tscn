@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dfhvrmll28alk"]
+
+[ext_resource type="Script" uid="uid://brck2fyasc5wc" path="res://flame_pickup.gd" id="1_h5qbh"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_dvefx"]
+size = Vector2(50, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ptca"]
+size = Vector2(50, 50)
+
+[node name="flame_pickup" type="Area2D" unique_id=2134229557]
+collision_mask = 4
+script = ExtResource("1_h5qbh")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=756760465]
+modulate = Color(0.8968397, 0, 0.3714331, 1)
+mesh = SubResource("QuadMesh_dvefx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1890632057]
+shape = SubResource("RectangleShape2D_1ptca")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

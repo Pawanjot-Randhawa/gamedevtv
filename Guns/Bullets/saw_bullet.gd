@@ -1,17 +1,24 @@
 extends Area2D
 
+@export var SPEED: int = 250
+var direction:Vector2
+
 var enemeis_in_range: Array
 
-var NAME = "SAW"
-
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Game.saw_tick.connect(saw_tick)
 
 func saw_tick() -> void:
 	if enemeis_in_range:
 		for enemy in enemeis_in_range:
-			enemy.take_damage(Stats.SAW_DAMAGE)
+			enemy.take_damage(Stats.SAW_BULLET_DAMAGE)
+
+func _physics_process(delta: float) -> void:
+	position += direction * SPEED * delta
+
+func _on_lifespan_timeout() -> void:
+	queue_free()
+
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.has_method("take_damage"):

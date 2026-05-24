@@ -1,8 +1,8 @@
 extends Area2D
 
-var enemeis_in_range: Array
+@export var DAMAGE: int = 10
 
-var NAME = "SAW"
+var enemeis_in_range: Array
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,7 +11,8 @@ func _ready() -> void:
 func saw_tick() -> void:
 	if enemeis_in_range:
 		for enemy in enemeis_in_range:
-			enemy.take_damage(Stats.SAW_DAMAGE)
+			enemy.take_damage(DAMAGE)
+			enemy.add_burn(4)
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.has_method("take_damage"):

@@ -9,17 +9,18 @@ size = Vector2(40, 100)
 size = Vector2(40, 100)
 
 [node name="Saw" type="Area2D" unique_id=317397775]
-collision_layer = 2
+collision_layer = 0
+collision_mask = 8
 script = ExtResource("1_xfn85")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1279534671]
 modulate = Color(0.5788502, 0.33649316, 0.23108026, 1)
+position = Vector2(1, -50)
 mesh = SubResource("QuadMesh_xfn85")
 
 [node name="MeshShape2D" type="CollisionShape2D" parent="." unique_id=841590306]
+position = Vector2(1, -50)
 shape = SubResource("RectangleShape2D_r50d6")
 
-[node name="SawTick" type="Timer" parent="." unique_id=211075035]
-wait_time = 0.25
-
-[connection signal="timeout" from="SawTick" to="." method="_on_saw_tick_timeout"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
