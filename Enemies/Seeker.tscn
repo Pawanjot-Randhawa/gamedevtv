@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cui5dche5q4g2"]
+
+[ext_resource type="Texture2D" uid="uid://ba0seq0hep51c" path="res://icon.svg" id="1_iylat"]
+[ext_resource type="Script" uid="uid://cxdtlm74m1kcf" path="res://Enemies/seeker.gd" id="2_j1d3u"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yaqdy"]
+radius = 575.5502
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j1d3u"]
+size = Vector2(136, 128)
+
+[node name="Seeker" type="CharacterBody2D" unique_id=1159179518]
+script = ExtResource("2_j1d3u")
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=1996130054]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=803995000]
+shape = SubResource("CircleShape2D_yaqdy")
+
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=841611032]
+shape = SubResource("RectangleShape2D_j1d3u")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1647394747]
+texture = ExtResource("1_iylat")
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
