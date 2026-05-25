@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bwql405xs8246" path="res://UI/upgrade_card.gd" id="1_frmbi"]
 [ext_resource type="Texture2D" uid="uid://b4ax0uqtfbw6p" path="res://assets/icons/cursor_move_256px.png" id="2_k3svc"]
 [ext_resource type="Texture2D" uid="uid://c77fhisi1htsu" path="res://assets/icons/dice5_64px.png" id="2_raahv"]
+[ext_resource type="FontFile" uid="uid://cnjtcjn321m5o" path="res://assets/Bungee-Regular.ttf" id="3_lqnor"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_frmbi"]
 bg_color = Color(0.16565639, 0.16565642, 0.1656563, 1)
@@ -48,6 +49,7 @@ stretch_mode = 5
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_vertical = 2
+theme_override_fonts/font = ExtResource("3_lqnor")
 theme_override_font_sizes/font_size = 40
 text = "Debug"
 horizontal_alignment = 1
@@ -60,6 +62,7 @@ texture = ExtResource("2_k3svc")
 [node name="Description" type="Label" parent="MarginContainer/VBoxContainer" unique_id=951276557]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_lqnor")
 text = "Debug"
 horizontal_alignment = 1
 autowrap_mode = 2
@@ -68,4 +71,5 @@ autowrap_mode = 2
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("3_lqnor")
 text = "SELECT"
