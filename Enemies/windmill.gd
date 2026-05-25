@@ -1,5 +1,4 @@
 extends CharacterBody2D
-const DEATH_EXPLOSION = preload("uid://cebkyf60hxx1g")
 
 var player:Player
 
@@ -14,26 +13,19 @@ func _ready() -> void:
 	Game.burn_tick.connect(burn)
 	player = Game.player
 
-func _physics_process(_delta: float) -> void:
-	for i in get_slide_collision_count():
-		var collision = get_slide_collision(i)
-		if collision.get_collider():
-			if collision.get_collider() is Player:
-				Game.player.HEALTH -= 10
-				var particles = DEATH_EXPLOSION.instantiate()
-				particles.position = global_position
-				particles.emitting = true
-				Game.add_child(particles)
-				queue_free()
-				break
+const SPEED = 300.0
+
+var rotate_speed = 3
+
+func _physics_process(delta: float) -> void:
+	rotate(self.rotate_speed * delta)
 	
 	var direction = global_position.direction_to(Game.player.global_position)
-	look_at(Game.player.global_position)
-	rotation_degrees += 90
 	self.velocity = direction * self.speed;
 	
 	self.move_and_slide()
 	progress_bar.global_position = global_position + Vector2(-50, -96)
+
 
 func take_damage(damage: int):
 	progress_bar.value -= damage
@@ -47,3 +39,8 @@ func burn():
 	if burn_ticks > 0:
 		burn_ticks-=1
 		take_damage(5)
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body is Player:
+		Game.player.HEALTH -= 5

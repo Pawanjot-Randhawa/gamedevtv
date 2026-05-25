@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://b3xldxg7vkmhj"]
+
+[ext_resource type="Texture2D" uid="uid://b6kojg64s3i1k" path="res://assets/sheet.svg" id="1_3x2t3"]
+[ext_resource type="Script" uid="uid://bdwva0183sf08" path="res://Enemies/windmill.gd" id="1_gid10"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gid10"]
+atlas = ExtResource("1_3x2t3")
+region = Rect2(2744, 1079, 456, 456)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmdbv"]
+atlas = ExtResource("1_3x2t3")
+region = Rect2(2474, 2279, 182, 182)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p6ad0"]
+atlas = ExtResource("1_3x2t3")
+region = Rect2(0, 2255, 65, 285)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gid10"]
+radius = 47.169907
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dmdbv"]
+height = 302.0
+
+[node name="Windmill" type="CharacterBody2D" unique_id=2053049337]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_gid10")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=247806173]
+position = Vector2(0, -4.7683716e-07)
+scale = Vector2(0.20614034, 0.20614034)
+texture = SubResource("AtlasTexture_gid10")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1743989078]
+position = Vector2(-3.8146973e-06, 4.7683716e-06)
+rotation = 0.7853982
+scale = Vector2(0.25509322, 0.26147)
+texture = SubResource("AtlasTexture_dmdbv")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=922617044]
+position = Vector2(0, -77.00001)
+scale = Vector2(0.30182964, 0.5163554)
+texture = SubResource("AtlasTexture_p6ad0")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=415144933]
+position = Vector2(0, 78.00001)
+scale = Vector2(0.30182964, 0.5163554)
+texture = SubResource("AtlasTexture_p6ad0")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=2115089435]
+position = Vector2(78, 0)
+rotation = -1.5707964
+scale = Vector2(0.30182964, 0.5163554)
+texture = SubResource("AtlasTexture_p6ad0")
+
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=1898965678]
+position = Vector2(-78, 0)
+rotation = -1.5707964
+scale = Vector2(0.30182964, 0.5163554)
+texture = SubResource("AtlasTexture_p6ad0")
+
+[node name="Hurtbox" type="CollisionShape2D" parent="." unique_id=530146358]
+shape = SubResource("CircleShape2D_gid10")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1123645619]
+top_level = true
+custom_minimum_size = Vector2(100, 0)
+offset_left = -50.0
+offset_top = -96.0
+offset_right = 50.0
+offset_bottom = -69.0
+value = 100.0
+show_percentage = false
+
+[node name="Area2D" type="Area2D" parent="." unique_id=983170594]
+collision_layer = 0
+collision_mask = 2
+
+[node name="Hitbox" type="CollisionShape2D" parent="Area2D" unique_id=1209676271]
+shape = SubResource("CapsuleShape2D_dmdbv")
+
+[node name="Hitbox2" type="CollisionShape2D" parent="Area2D" unique_id=953638782]
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_dmdbv")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

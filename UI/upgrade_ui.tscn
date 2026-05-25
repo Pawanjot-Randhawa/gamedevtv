@@ -20,9 +20,6 @@ theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 100
 theme_override_constants/margin_bottom = 50
 
-[node name="PanelContainer" type="PanelContainer" parent="CenterContainer/MarginContainer" unique_id=1682687393]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/MarginContainer/PanelContainer" unique_id=2136929788]
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/MarginContainer" unique_id=2136929788]
 layout_mode = 2
 theme_override_constants/separation = 30

@@ -1,5 +1,8 @@
 extends Node
 
+signal player_health_change
+signal upgrade_menu_on(on:bool)
+
 signal burn_tick
 signal saw_tick
 signal shoot_tick

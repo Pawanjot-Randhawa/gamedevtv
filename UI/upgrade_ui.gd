@@ -5,7 +5,7 @@ class_name Upgrade_UI
 const UPGRADE_CARD = preload("uid://d3e0reumoty6i")
 
 # Drag your HBoxContainer from the scene tree into the script holding Ctrl to auto-path
-@onready var choice_holder:Node = $CenterContainer/MarginContainer/PanelContainer/HBoxContainer
+@onready var choice_holder:Node = $CenterContainer/MarginContainer/HBoxContainer
 func _ready() -> void:
 	hide()
 
@@ -13,6 +13,7 @@ func display_upgrade_options():
 	
 	# 1. Open menu
 	show()
+	Game.upgrade_menu_on.emit(true)
 	get_tree().paused = true
 	
 	# 2. Flush out previous round's upgrade choices
@@ -53,4 +54,5 @@ func on_option_chosen(chosen_upgrade: String):
 	Data.upgrades[chosen_upgrade][0] += 1
 	Game.player.upgrade(chosen_upgrade)
 	get_tree().paused = false
+	Game.upgrade_menu_on.emit(false)
 	hide()

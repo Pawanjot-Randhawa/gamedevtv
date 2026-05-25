@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bj1fwdi0ljtnk"]
 
 [ext_resource type="Script" uid="uid://b55m28gfoy4jy" path="res://Guns/Single/gun.gd" id="1_1q0sl"]
+[ext_resource type="Texture2D" uid="uid://cxxpe1u2skpv2" path="res://assets/Gun.png" id="2_rkhju"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_hk4kp"]
 size = Vector2(40, 100)
@@ -11,15 +12,23 @@ size = Vector2(40, 20)
 [node name="Gun" type="Node2D" unique_id=672512490]
 script = ExtResource("1_1q0sl")
 
+[node name="bulletSpawnPoint" type="Marker2D" parent="." unique_id=1806992375]
+position = Vector2(0, -91)
+
 [node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=2118751101]
+visible = false
 modulate = Color(0.5132329, 0.5132329, 0.5132329, 1)
 position = Vector2(0, -50)
 mesh = SubResource("QuadMesh_hk4kp")
 
 [node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=593389283]
+visible = false
 modulate = Color(0.93699604, 0.22654024, 0, 1)
 position = Vector2(0, -90)
 mesh = SubResource("QuadMesh_1q0sl")
 
-[node name="bulletSpawnPoint" type="Marker2D" parent="." unique_id=1806992375]
-position = Vector2(0, -91)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1631466891]
+position = Vector2(11.000001, -75)
+rotation = -1.5707964
+scale = Vector2(0.19033258, 0.24299882)
+texture = ExtResource("2_rkhju")

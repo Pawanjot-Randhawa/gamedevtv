@@ -1,22 +1,24 @@
 [gd_scene format=3 uid="uid://byque4w54oowj"]
 
 [ext_resource type="Script" uid="uid://batafhm05bnuw" path="res://Player/player.gd" id="1_l8h54"]
-[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="2_4ntmi"]
 [ext_resource type="PackedScene" uid="uid://dhxkorp3qahlr" path="res://Componets/socket.tscn" id="3_btcbx"]
+[ext_resource type="Texture2D" uid="uid://dk4348vboefkd" path="res://assets/sheet.png" id="4_gwnis"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ntmi"]
-size = Vector2(128, 126)
+[sub_resource type="AtlasTexture" id="AtlasTexture_k53q1"]
+atlas = ExtResource("4_gwnis")
+region = Rect2(434, 234, 91, 91)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_btcbx"]
+atlas = ExtResource("4_gwnis")
+region = Rect2(734, 977, 40, 40)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gwnis"]
+radius = 37.93
 
 [node name="Player" type="CharacterBody2D" unique_id=1991989628]
 collision_layer = 2
 collision_mask = 9
 script = ExtResource("1_l8h54")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1587372686]
-texture = ExtResource("2_4ntmi")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=489602733]
-shape = SubResource("RectangleShape2D_4ntmi")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2102302182]
 
@@ -38,3 +40,28 @@ NAME = "UP"
 position = Vector2(0, 64)
 rotation = 3.1415927
 NAME = "DOWN"
+
+[node name="Body" type="Sprite2D" parent="." unique_id=1078243688]
+texture = SubResource("AtlasTexture_k53q1")
+
+[node name="SocketImage" type="Sprite2D" parent="." unique_id=1808101683]
+position = Vector2(0, -61)
+texture = SubResource("AtlasTexture_btcbx")
+
+[node name="SocketImage4" type="Sprite2D" parent="." unique_id=1956758453]
+position = Vector2(0, 63)
+rotation = 3.1415927
+texture = SubResource("AtlasTexture_btcbx")
+
+[node name="SocketImage2" type="Sprite2D" parent="." unique_id=1465349017]
+position = Vector2(62, 0)
+rotation = 1.5707964
+texture = SubResource("AtlasTexture_btcbx")
+
+[node name="SocketImage3" type="Sprite2D" parent="." unique_id=618112629]
+position = Vector2(-61, -1)
+rotation = -1.5707964
+texture = SubResource("AtlasTexture_btcbx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=489602733]
+shape = SubResource("CircleShape2D_gwnis")

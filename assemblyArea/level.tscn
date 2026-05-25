@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://4fn0r0cy5akp" path="res://Pickups/Gun/gun_pickup.tscn" id="5_krlfu"]
 [ext_resource type="PackedScene" uid="uid://dfhvrmll28alk" path="res://Pickups/Gun/flame_pickup.tscn" id="6_6pda2"]
 [ext_resource type="PackedScene" uid="uid://wj7f43hg72gd" path="res://Pickups/Upgrades/player_upgrade.tscn" id="6_6wlh6"]
+[ext_resource type="PackedScene" uid="uid://cui5dche5q4g2" path="res://Enemies/Seeker.tscn" id="7_6wlh6"]
+[ext_resource type="PackedScene" uid="uid://b3xldxg7vkmhj" path="res://Enemies/windmill.tscn" id="8_r7cm4"]
 
 [node name="level" type="Node2D" unique_id=1512950284]
 
@@ -104,3 +106,15 @@ position = Vector2(-995, 372)
 
 [node name="PlayerUpgrade12" parent="." unique_id=1593067472 instance=ExtResource("6_6wlh6")]
 position = Vector2(-1106, 435)
+
+[node name="Seeker" parent="." unique_id=1159179518 instance=ExtResource("7_6wlh6")]
+position = Vector2(293, 29)
+
+[node name="Seeker2" parent="." unique_id=1208052802 instance=ExtResource("7_6wlh6")]
+position = Vector2(1140, 202)
+
+[node name="Seeker3" parent="." unique_id=303426627 instance=ExtResource("7_6wlh6")]
+position = Vector2(180, 557)
+
+[node name="Windmill" parent="." unique_id=2053049337 instance=ExtResource("8_r7cm4")]
+position = Vector2(237, -137)

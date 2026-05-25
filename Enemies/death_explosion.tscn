@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cebkyf60hxx1g"]
+
+[ext_resource type="Script" uid="uid://cgpivdo3wibg6" path="res://Enemies/death_explosion.gd" id="1_7dxey"]
+
+[sub_resource type="Gradient" id="Gradient_8h6te"]
+offsets = PackedFloat32Array(0.5588235, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_7dxey"]
+gradient = SubResource("Gradient_8h6te")
+
+[sub_resource type="Curve" id="Curve_xfcii"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_um7bb"]
+curve = SubResource("Curve_xfcii")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_j1sbm"]
+particle_flag_disable_z = true
+spread = 180.0
+initial_velocity_min = 277.78
+initial_velocity_max = 666.67
+gravity = Vector3(0, 0, 0)
+scale_min = 20.0
+scale_max = 20.0
+scale_curve = SubResource("CurveTexture_um7bb")
+color_ramp = SubResource("GradientTexture1D_7dxey")
+
+[node name="death_explosion" type="GPUParticles2D" unique_id=2053309802]
+self_modulate = Color(0.84233356, 0, 0.20211607, 1)
+emitting = false
+amount = 50
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_j1sbm")
+script = ExtResource("1_7dxey")
+
+[connection signal="finished" from="." to="." method="_on_finished"]
