@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bfqjgr2yf60tg"]
+
+[ext_resource type="Script" uid="uid://6fbqfxt1jaxv" path="res://UI/upgrade_ui.gd" id="1_fl778"]
+
+[node name="UpgradeUI" type="CanvasLayer" unique_id=1561088062]
+process_mode = 3
+script = ExtResource("1_fl778")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1472085414]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer" unique_id=23438569]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 50
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer/MarginContainer" unique_id=1682687393]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/MarginContainer/PanelContainer" unique_id=2136929788]
+layout_mode = 2
+theme_override_constants/separation = 30

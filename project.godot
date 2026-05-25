@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Game="*uid://ckuvnua3eua"
 Stats="*uid://cydbnynfjd7nh"
+Data="*uid://dcapqrclvhs6o"
 
 [importer_defaults]
 

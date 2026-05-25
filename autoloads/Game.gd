@@ -7,6 +7,7 @@ signal flamethrow_tick
 signal flameduration_tick
 
 var player:Player = null
+var upgrade_ui:Upgrade_UI = null
 
 var bullets: Node = null
 

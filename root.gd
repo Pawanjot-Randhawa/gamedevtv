@@ -2,6 +2,7 @@ extends Node
 
 @onready var player: Player = $level/Player
 @onready var bullets: Node = $Bullets
+@onready var upgrade_ui: Upgrade_UI = $CanvasLayer/UpgradeUI
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_accept"):
@@ -11,6 +12,7 @@ func _input(event: InputEvent) -> void:
 func _ready() -> void:
 	Game.player = player
 	Game.bullets = bullets
+	Game.upgrade_ui = upgrade_ui
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

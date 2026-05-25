@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c2hmjjiiinp61" path="res://Enemies/Testerdummy.tscn" id="4_m8vf4"]
 [ext_resource type="PackedScene" uid="uid://4fn0r0cy5akp" path="res://Pickups/Gun/gun_pickup.tscn" id="5_krlfu"]
 [ext_resource type="PackedScene" uid="uid://dfhvrmll28alk" path="res://Pickups/Gun/flame_pickup.tscn" id="6_6pda2"]
+[ext_resource type="PackedScene" uid="uid://wj7f43hg72gd" path="res://Pickups/Upgrades/player_upgrade.tscn" id="6_6wlh6"]
 
 [node name="level" type="Node2D" unique_id=1512950284]
 
@@ -67,3 +68,39 @@ offset_top = 157.0
 offset_right = 389.0
 offset_bottom = 180.0
 text = "GUN"
+
+[node name="PlayerUpgrade" parent="." unique_id=1834820325 instance=ExtResource("6_6wlh6")]
+position = Vector2(-541, 87)
+
+[node name="PlayerUpgrade2" parent="." unique_id=1883950939 instance=ExtResource("6_6wlh6")]
+position = Vector2(-787, 212)
+
+[node name="PlayerUpgrade3" parent="." unique_id=2029954249 instance=ExtResource("6_6wlh6")]
+position = Vector2(-591, 354)
+
+[node name="PlayerUpgrade4" parent="." unique_id=1693403202 instance=ExtResource("6_6wlh6")]
+position = Vector2(-726, 79)
+
+[node name="PlayerUpgrade5" parent="." unique_id=2005345978 instance=ExtResource("6_6wlh6")]
+position = Vector2(-946, 517)
+
+[node name="PlayerUpgrade6" parent="." unique_id=295003144 instance=ExtResource("6_6wlh6")]
+position = Vector2(-1043, 157)
+
+[node name="PlayerUpgrade7" parent="." unique_id=2010501745 instance=ExtResource("6_6wlh6")]
+position = Vector2(-888, 281)
+
+[node name="PlayerUpgrade8" parent="." unique_id=1614045828 instance=ExtResource("6_6wlh6")]
+position = Vector2(-762, 505)
+
+[node name="PlayerUpgrade9" parent="." unique_id=1357713935 instance=ExtResource("6_6wlh6")]
+position = Vector2(-516, 511)
+
+[node name="PlayerUpgrade10" parent="." unique_id=784825669 instance=ExtResource("6_6wlh6")]
+position = Vector2(-613, 630)
+
+[node name="PlayerUpgrade11" parent="." unique_id=1402327899 instance=ExtResource("6_6wlh6")]
+position = Vector2(-995, 372)
+
+[node name="PlayerUpgrade12" parent="." unique_id=1593067472 instance=ExtResource("6_6wlh6")]
+position = Vector2(-1106, 435)

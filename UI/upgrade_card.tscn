@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://d3e0reumoty6i"]
+
+[ext_resource type="Script" uid="uid://bwql405xs8246" path="res://UI/upgrade_card.gd" id="1_frmbi"]
+[ext_resource type="Texture2D" uid="uid://b4ax0uqtfbw6p" path="res://assets/icons/cursor_move_256px.png" id="2_k3svc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_frmbi"]
+bg_color = Color(0.16565639, 0.16565642, 0.1656563, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="UpgradeCard" type="PanelContainer" unique_id=444388227]
+custom_minimum_size = Vector2(200, 300)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -110.0
+offset_top = -150.0
+offset_right = 110.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_frmbi")
+script = ExtResource("1_frmbi")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1329019284]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=44601225]
+layout_mode = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer" unique_id=664602623]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Debug"
+horizontal_alignment = 1
+
+[node name="Icon" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=288668139]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+texture = ExtResource("2_k3svc")
+
+[node name="Description" type="Label" parent="MarginContainer/VBoxContainer" unique_id=951276557]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Debug"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="SelectButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1844067454]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_vertical = 8
+text = "SELECT"

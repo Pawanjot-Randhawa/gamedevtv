@@ -5,7 +5,7 @@ class_name  Player
 var SPEED = 500.0
 var ROTATION_SPEED = 2.0
 var HEALTH = 100
-
+var REGEN_AMOUNT = 10
 var rotation_direction
 
 func _input(event: InputEvent) -> void:
@@ -31,3 +31,16 @@ func _physics_process(delta: float) -> void:
 	rotation += rotation_direction * ROTATION_SPEED * delta
 	#Move and slide uses velcoity to move our guy
 	move_and_slide()
+
+func regen():
+	HEALTH += REGEN_AMOUNT
+
+func upgrade(upgrade: String):
+	if upgrade == "Movement":
+		SPEED += 100
+	elif upgrade == "Rotation":
+		ROTATION_SPEED += 1
+	elif upgrade == "Health":
+		HEALTH += 50
+	elif upgrade == "Regen":
+		REGEN_AMOUNT += 10

@@ -16,27 +16,28 @@ script = ExtResource("1_vn4lp")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1024434903]
 modulate = Color(0.5132329, 0.5132329, 0.5132329, 1)
+position = Vector2(0, -50)
 mesh = SubResource("QuadMesh_oyw4k")
 
 [node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=959597763]
 modulate = Color(0.93699604, 0.22654024, 0, 1)
-position = Vector2(0, -40)
+position = Vector2(0, -90)
 mesh = SubResource("QuadMesh_vn4lp")
 
 [node name="bulletSpawnPoint" type="Marker2D" parent="." unique_id=172879177]
-position = Vector2(0, -41)
+position = Vector2(0, -91)
 
 [node name="MeshInstance2D3" type="MeshInstance2D" parent="." unique_id=894088375]
 modulate = Color(0.81237215, 0, 0.2994941, 1)
-position = Vector2(0, -25)
+position = Vector2(0, -75)
 mesh = SubResource("QuadMesh_7jus5")
 
 [node name="MeshInstance2D4" type="MeshInstance2D" parent="." unique_id=498686840]
 modulate = Color(0.81237215, 0, 0.2994941, 1)
-position = Vector2(0, -17)
+position = Vector2(0, -67)
 mesh = SubResource("QuadMesh_7jus5")
 
 [node name="MeshInstance2D5" type="MeshInstance2D" parent="." unique_id=1317748274]
 modulate = Color(0.81237215, 0, 0.2994941, 1)
-position = Vector2(0, -9)
+position = Vector2(0, -59)
 mesh = SubResource("QuadMesh_7jus5")
