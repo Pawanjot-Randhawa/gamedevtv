@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bwql405xs8246" path="res://UI/upgrade_card.gd" id="1_frmbi"]
 [ext_resource type="Texture2D" uid="uid://b4ax0uqtfbw6p" path="res://assets/icons/cursor_move_256px.png" id="2_k3svc"]
+[ext_resource type="Texture2D" uid="uid://c77fhisi1htsu" path="res://assets/icons/dice5_64px.png" id="2_raahv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_frmbi"]
 bg_color = Color(0.16565639, 0.16565642, 0.1656563, 1)
@@ -37,6 +38,11 @@ theme_override_constants/margin_bottom = 15
 layout_mode = 2
 theme_override_constants/separation = 15
 alignment = 1
+
+[node name="Level" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=558315004]
+layout_mode = 2
+texture = ExtResource("2_raahv")
+stretch_mode = 5
 
 [node name="Title" type="Label" parent="MarginContainer/VBoxContainer" unique_id=664602623]
 custom_minimum_size = Vector2(0, 50)

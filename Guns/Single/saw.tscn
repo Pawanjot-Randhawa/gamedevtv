@@ -22,5 +22,7 @@ mesh = SubResource("QuadMesh_xfn85")
 position = Vector2(1, -50)
 shape = SubResource("RectangleShape2D_r50d6")
 
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=1950730229]
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

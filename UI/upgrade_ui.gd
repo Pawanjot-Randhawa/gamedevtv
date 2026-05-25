@@ -40,6 +40,7 @@ func display_upgrade_options():
 		
 		# Set up the text elements inside your card node
 		# (Assuming your card script has a setup function or direct label references)
+		card_instance.get_node("MarginContainer/VBoxContainer/Level").texture = Data.levels[upgrade_level + 1]
 		card_instance.get_node("MarginContainer/VBoxContainer/Title").text = upgrade_name 
 		card_instance.get_node("MarginContainer/VBoxContainer/Icon").texture = load(Data.upgrades[upgrade_name][2])
 		card_instance.get_node("MarginContainer/VBoxContainer/Description").text = upgrade_desc

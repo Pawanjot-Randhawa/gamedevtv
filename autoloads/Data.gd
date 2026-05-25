@@ -7,3 +7,11 @@ var upgrades:Dictionary = {
 	"Health": [0, "Increase your health by 100", "res://assets/icons/hearts_256px.png"],
 	"Regen": [0, "Increase your Health Regen Rate", "res://assets/icons/heart_card_256px.png"]
 }
+
+var levels:Dictionary = {
+	1:preload("uid://bktil4ildeec8"),
+	2:preload("uid://ypbd3u2wckw5"),
+	3:preload("uid://cv0gnvq5ri427"),
+	4:preload("uid://ou3ri8pi6h0i"),
+	5:preload("uid://c77fhisi1htsu")
+}
