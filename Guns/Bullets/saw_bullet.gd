@@ -1,9 +1,12 @@
 extends Area2D
 
 @export var SPEED: int = 250
-var direction:Vector2
+@export var rotate_speed: int = 3
+@onready var saw_sprite: Sprite2D = $"Sprite2D"
 
+var direction:Vector2
 var enemeis_in_range: Array
+
 
 func _ready() -> void:
 	Game.saw_tick.connect(saw_tick)
@@ -15,6 +18,7 @@ func saw_tick() -> void:
 
 func _physics_process(delta: float) -> void:
 	position += direction * SPEED * delta
+	self.saw_sprite.rotate(self.rotate_speed * delta)
 
 func _on_lifespan_timeout() -> void:
 	queue_free()

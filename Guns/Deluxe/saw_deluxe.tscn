@@ -1,15 +1,16 @@
 [gd_scene format=3 uid="uid://b7164occ854v5"]
 
 [ext_resource type="Script" uid="uid://crpaapqda8tnx" path="res://Guns/Deluxe/saw_deluxe.gd" id="1_plgkt"]
+[ext_resource type="Texture2D" uid="uid://bwmlmlrxr54xj" path="res://assets/saw.png" id="2_6m5s2"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_k1ayl"]
 size = Vector2(80, 140)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_plgkt"]
-size = Vector2(80, 140)
+size = Vector2(169, 169)
 
-[sub_resource type="QuadMesh" id="QuadMesh_plgkt"]
-size = Vector2(20, 20)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6m5s2"]
+size = Vector2(186, 185)
 
 [node name="saw_deluxe" type="Area2D" unique_id=486610968]
 collision_layer = 0
@@ -17,38 +18,35 @@ collision_mask = 8
 script = ExtResource("1_plgkt")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=73603130]
-modulate = Color(0.5788502, 0.33649316, 0.23108026, 1)
-position = Vector2(0, -70)
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1.5, -53.250004)
+scale = Vector2(0.6625, 0.7821429)
 mesh = SubResource("QuadMesh_k1ayl")
 
-[node name="MeshShape2D" type="CollisionShape2D" parent="." unique_id=1165622541]
-position = Vector2(0, -70)
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=300169020]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(75, -179.00003)
+rotation = 3.8892589
+scale = Vector2(0.64999914, 1.6524718)
+mesh = SubResource("QuadMesh_k1ayl")
+
+[node name="Saw1Collision" type="CollisionShape2D" parent="." unique_id=1165622541]
+position = Vector2(-0.8732605, -110.25)
 shape = SubResource("RectangleShape2D_plgkt")
 
-[node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=754014278]
-modulate = Color(0.20871013, 0.20871016, 0.20871013, 1)
-position = Vector2(-30, -130)
-mesh = SubResource("QuadMesh_plgkt")
+[node name="Saw2Collision" type="CollisionShape2D" parent="." unique_id=335317227]
+position = Vector2(136.56357, -248.50003)
+shape = SubResource("RectangleShape2D_6m5s2")
 
-[node name="MeshInstance2D3" type="MeshInstance2D" parent="." unique_id=364061076]
-modulate = Color(0.20871013, 0.20871016, 0.20871013, 1)
-position = Vector2(0, -130)
-mesh = SubResource("QuadMesh_plgkt")
+[node name="Saw1" type="Sprite2D" parent="." unique_id=2050538235]
+position = Vector2(-0.3732605, -111.75)
+scale = Vector2(0.685811, 0.68581086)
+texture = ExtResource("2_6m5s2")
 
-[node name="MeshInstance2D4" type="MeshInstance2D" parent="." unique_id=1545855560]
-modulate = Color(0.20871013, 0.20871016, 0.20871013, 1)
-position = Vector2(30, -130)
-mesh = SubResource("QuadMesh_plgkt")
-
-[node name="MeshInstance2D5" type="MeshInstance2D" parent="." unique_id=338081571]
-modulate = Color(0.20871013, 0.20871016, 0.20871013, 1)
-position = Vector2(30, -97)
-mesh = SubResource("QuadMesh_plgkt")
-
-[node name="MeshInstance2D6" type="MeshInstance2D" parent="." unique_id=200488419]
-modulate = Color(0.20871013, 0.20871016, 0.20871013, 1)
-position = Vector2(-30, -97)
-mesh = SubResource("QuadMesh_plgkt")
+[node name="Saw2" type="Sprite2D" parent="." unique_id=382801779]
+position = Vector2(137.24326, -248)
+scale = Vector2(0.7567568, 0.7567567)
+texture = ExtResource("2_6m5s2")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

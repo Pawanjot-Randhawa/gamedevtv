@@ -1,22 +1,31 @@
 [gd_scene format=3 uid="uid://bq8ptdc5f5o57"]
 
 [ext_resource type="Script" uid="uid://ces3emcoj617s" path="res://Pickups/Gun/saw_pickup.gd" id="1_arvbj"]
+[ext_resource type="Texture2D" uid="uid://bwmlmlrxr54xj" path="res://assets/saw.png" id="2_2tuxm"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_8djet"]
 size = Vector2(50, 50)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2tuxm"]
-size = Vector2(50, 50)
+size = Vector2(77, 77)
 
 [node name="SawPickup" type="Area2D" unique_id=761092200]
 collision_mask = 4
 script = ExtResource("1_arvbj")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1229878283]
-modulate = Color(0.9025029, 0.29652125, 0.34887204, 1)
+modulate = Color(0, 0, 0, 0.20784314)
+position = Vector2(-1.0000029, -3.000002)
+scale = Vector2(1.56, 1.5600001)
 mesh = SubResource("QuadMesh_8djet")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1524596127]
+position = Vector2(-1.5, -3.5)
 shape = SubResource("RectangleShape2D_2tuxm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1212739512]
+position = Vector2(-0.9999981, -3)
+scale = Vector2(0.3243244, 0.32432434)
+texture = ExtResource("2_2tuxm")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

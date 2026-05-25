@@ -1,12 +1,19 @@
 extends Area2D
 
-var enemeis_in_range: Array
+@export var rotate_speed: int = 3
+@onready var saw_sprite_one: Sprite2D = $"Saw1"
+@onready var saw_sprite_two: Sprite2D = $"Saw2"
 
+var enemeis_in_range: Array
 var NAME = "SAW"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Game.saw_tick.connect(saw_tick)
+
+func _physics_process(delta: float) -> void:
+	self.saw_sprite_one.rotate(self.rotate_speed * delta)
+	self.saw_sprite_two.rotate(self.rotate_speed * delta)
 
 func saw_tick() -> void:
 	if enemeis_in_range:

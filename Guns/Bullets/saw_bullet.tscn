@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dysv76lu8tsmg"]
 
 [ext_resource type="Script" uid="uid://bwl08fsv00xab" path="res://Guns/Bullets/saw_bullet.gd" id="1_lswr3"]
+[ext_resource type="Texture2D" uid="uid://bwmlmlrxr54xj" path="res://assets/saw.png" id="2_lcjo3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f8hqb"]
 
@@ -16,6 +17,7 @@ script = ExtResource("1_lswr3")
 shape = SubResource("RectangleShape2D_f8hqb")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1650543333]
+visible = false
 modulate = Color(0.40161783, 0.33136055, 0.24102151, 1)
 mesh = SubResource("QuadMesh_lswr3")
 
@@ -23,6 +25,10 @@ mesh = SubResource("QuadMesh_lswr3")
 wait_time = 8.0
 one_shot = true
 autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=122712262]
+scale = Vector2(0.18243243, 0.18243243)
+texture = ExtResource("2_lcjo3")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
