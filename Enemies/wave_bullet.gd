@@ -13,5 +13,5 @@ func _on_timer_timeout() -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
-		Game.player.HEALTH -= 5
+		Game.player.HEALTH -= 15
 		queue_free()

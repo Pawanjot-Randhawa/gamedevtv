@@ -23,47 +23,63 @@ position = Vector2(2, -308)
 wait_time = 7.0
 
 [node name="GunPickup" parent="." unique_id=684247242 instance=ExtResource("7_v5cjn")]
-position = Vector2(-2, 30)
+position = Vector2(-343, -34)
 
 [node name="Label" type="Label" parent="." unique_id=737894207]
-offset_left = -99.0
-offset_top = -251.0
-offset_right = 102.0
-offset_bottom = -164.0
+offset_left = -505.0
+offset_top = -361.0
+offset_right = -152.0
+offset_bottom = -274.0
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("8_ce06e")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 26
+text = "Left/Right Click or Q/e
+To Rotate"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="." unique_id=496991028]
+offset_left = -456.0
+offset_top = -443.0
+offset_right = -195.0
+offset_bottom = -356.0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("8_ce06e")
+theme_override_font_sizes/font_size = 26
 text = "WASD/Arrow Keys
 To Move"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="." unique_id=775665780]
-offset_left = -165.0
-offset_top = -177.0
-offset_right = 167.0
-offset_bottom = -90.0
+offset_left = -519.0
+offset_top = -268.0
+offset_right = -89.0
+offset_bottom = -181.0
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("8_ce06e")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 26
 text = "You Have 4 Weapon SLots
 2 attachemnts fit into each"
 horizontal_alignment = 1
 
 [node name="Label3" type="Label" parent="." unique_id=414556393]
-offset_left = -136.0
-offset_top = -101.0
-offset_right = 138.0
-offset_bottom = -61.0
+offset_left = -491.0
+offset_top = -173.0
+offset_right = -135.0
+offset_bottom = -133.0
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("8_ce06e")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 26
 text = "Kill Enimies For Parts"
 horizontal_alignment = 1
 
 [node name="Label4" type="Label" parent="." unique_id=907297150]
-offset_left = -134.0
-offset_top = -50.0
-offset_right = 132.0
-offset_bottom = -10.0
+offset_left = -486.0
+offset_top = -105.0
+offset_right = -147.0
+offset_bottom = -65.0
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("8_ce06e")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 26
 text = "You Get one for free :)"
 horizontal_alignment = 1
 

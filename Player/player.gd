@@ -15,6 +15,10 @@ var ROTATION_SPEED = 2.0
 var HEALTH_MAX = 100
 var HEALTH = 100:
 	set(value):
+		if value < 0:
+			get_tree().reload_current_scene()
+			Game.first_picked = false
+			Stats.KILLS = 0
 		HEALTH = clamp(value, 0, HEALTH_MAX)
 		Game.player_health_change.emit()
 var REGEN_AMOUNT = 10

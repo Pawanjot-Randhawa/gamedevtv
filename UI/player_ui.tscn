@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cd1rnjp6gf8wp"]
 
 [ext_resource type="Script" uid="uid://dri7b7yk7qr57" path="res://UI/player_ui.gd" id="1_c8xti"]
+[ext_resource type="FontFile" uid="uid://cnjtcjn321m5o" path="res://assets/Bungee-Regular.ttf" id="2_nplvd"]
 
 [node name="player_ui" type="CanvasLayer" unique_id=1343201078]
 script = ExtResource("1_c8xti")
@@ -12,6 +13,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 20
 
 [node name="ProgressBar" type="ProgressBar" parent="MarginContainer" unique_id=1286133119]
@@ -20,3 +23,11 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 value = 100.0
+
+[node name="Kills" type="Label" parent="MarginContainer" unique_id=635976749]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_nplvd")
+theme_override_font_sizes/font_size = 20
+text = "0"
