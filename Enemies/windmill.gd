@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
 var player:Player
+const SAW_PICKUP = preload("uid://bq8ptdc5f5o57")
+const PLAYER_UPGRADE = preload("uid://wj7f43hg72gd")
 
 @export var speed: float = 150.0
 @onready var progress_bar: ProgressBar = $ProgressBar
@@ -30,6 +32,15 @@ func _physics_process(delta: float) -> void:
 func take_damage(damage: int):
 	progress_bar.value -= damage
 	if progress_bar.value <= 0:
+		if randf() <= 0.30:
+			var pickup = SAW_PICKUP.instantiate()
+			get_tree().current_scene.call_deferred("add_child",pickup)
+			pickup.global_position = global_position
+		elif randf() <= 0.60:
+			var pickup = PLAYER_UPGRADE.instantiate()
+			get_tree().current_scene.call_deferred("add_child",pickup)
+			pickup.global_position = global_position
+		Stats.KILLS += 1
 		queue_free()
 
 func add_burn(ticks:int):

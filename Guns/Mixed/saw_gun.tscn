@@ -1,50 +1,22 @@
 [gd_scene format=3 uid="uid://diwd6b36ng5cn"]
 
 [ext_resource type="Script" uid="uid://r8ltd5rkfj3w" path="res://Guns/Mixed/saw_gun.gd" id="1_76ra6"]
-
-[sub_resource type="QuadMesh" id="QuadMesh_a4j7a"]
-size = Vector2(40, 100)
-
-[sub_resource type="QuadMesh" id="QuadMesh_76ra6"]
-size = Vector2(40, 20)
-
-[sub_resource type="QuadMesh" id="QuadMesh_benq5"]
-size = Vector2(20, 5)
-
-[sub_resource type="QuadMesh" id="QuadMesh_t8yr5"]
-size = Vector2(10, 5)
+[ext_resource type="Texture2D" uid="uid://cxxpe1u2skpv2" path="res://assets/Gun.png" id="2_t8yr5"]
+[ext_resource type="Texture2D" uid="uid://bwmlmlrxr54xj" path="res://assets/saw.png" id="3_6cief"]
 
 [node name="saw_gun" type="Node2D" unique_id=1126468398]
 script = ExtResource("1_76ra6")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=725458201]
-modulate = Color(0.5132329, 0.5132329, 0.5132329, 1)
-mesh = SubResource("QuadMesh_a4j7a")
-
-[node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=1105575555]
-modulate = Color(0.93699604, 0.22654024, 0, 1)
-position = Vector2(0, -40)
-mesh = SubResource("QuadMesh_76ra6")
-
 [node name="bulletSpawnPoint" type="Marker2D" parent="." unique_id=314549868]
-position = Vector2(0, -41)
+position = Vector2(0, -84)
 
-[node name="MeshInstance2D3" type="MeshInstance2D" parent="." unique_id=572973970]
-modulate = Color(0.20152658, 0.20152658, 0.20152658, 1)
-position = Vector2(0, -25)
-mesh = SubResource("QuadMesh_benq5")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=221688186]
+position = Vector2(11.000001, -75)
+rotation = -1.5707964
+scale = Vector2(0.19033258, 0.24299882)
+texture = ExtResource("2_t8yr5")
 
-[node name="MeshInstance2D6" type="MeshInstance2D" parent="." unique_id=2086641780]
-modulate = Color(0.20152658, 0.20152658, 0.20152658, 1)
-position = Vector2(0, -2)
-mesh = SubResource("QuadMesh_benq5")
-
-[node name="MeshInstance2D4" type="MeshInstance2D" parent="." unique_id=1293782187]
-modulate = Color(0.20152658, 0.20152658, 0.20152658, 1)
-position = Vector2(-10, -14)
-mesh = SubResource("QuadMesh_t8yr5")
-
-[node name="MeshInstance2D5" type="MeshInstance2D" parent="." unique_id=804758010]
-modulate = Color(0.20152658, 0.20152658, 0.20152658, 1)
-position = Vector2(10, -14)
-mesh = SubResource("QuadMesh_t8yr5")
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=296866480]
+position = Vector2(-1, -83)
+scale = Vector2(0.3334444, 0.32432434)
+texture = ExtResource("3_6cief")

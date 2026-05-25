@@ -1,6 +1,6 @@
 extends Node
 
-@onready var player: Player = $level/Player
+@onready var player: Player = $Floor/Player
 @onready var bullets: Node = $Bullets
 @onready var upgrade_ui: Upgrade_UI = $CanvasLayer/UpgradeUI
 

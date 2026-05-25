@@ -1,30 +1,38 @@
 [gd_scene format=3 uid="uid://danmsw7nlenr4"]
 
 [ext_resource type="Script" uid="uid://drsb8u2ukpanv" path="res://Guns/Deluxe/gun_deluxe.gd" id="1_st75f"]
+[ext_resource type="Texture2D" uid="uid://cxxpe1u2skpv2" path="res://assets/Gun.png" id="2_x1k0n"]
 
-[sub_resource type="QuadMesh" id="QuadMesh_x1k0n"]
-size = Vector2(40, 100)
-
-[sub_resource type="QuadMesh" id="QuadMesh_66us3"]
-size = Vector2(100, 20)
+[sub_resource type="AtlasTexture" id="AtlasTexture_66us3"]
+atlas = ExtResource("2_x1k0n")
+region = Rect2(456, 271, 173, 86)
 
 [node name="gun_deluxe" type="Node2D" unique_id=1429842722]
 script = ExtResource("1_st75f")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=646841897]
-modulate = Color(0.5132329, 0.5132329, 0.5132329, 1)
-mesh = SubResource("QuadMesh_x1k0n")
-
-[node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=643752610]
-modulate = Color(0.93699604, 0.22654024, 0, 1)
-position = Vector2(0, -40)
-mesh = SubResource("QuadMesh_66us3")
-
 [node name="bulletSpawnPoint" type="Marker2D" parent="." unique_id=610603484]
-position = Vector2(0, -41)
+position = Vector2(0, -94)
 
 [node name="bulletSpawnPoint2" type="Marker2D" parent="." unique_id=1158899801]
-position = Vector2(-31, -41)
+position = Vector2(-18, -94)
 
 [node name="bulletSpawnPoint3" type="Marker2D" parent="." unique_id=1672948042]
-position = Vector2(33, -41)
+position = Vector2(19, -94)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=440161257]
+position = Vector2(11.000001, -75)
+rotation = -1.5707964
+scale = Vector2(0.19033258, 0.24299882)
+texture = ExtResource("2_x1k0n")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1405656589]
+position = Vector2(-17.999998, -87)
+rotation = -1.5707964
+scale = Vector2(0.18996453, 0.18996453)
+texture = SubResource("AtlasTexture_66us3")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1078328915]
+position = Vector2(18.000006, -87)
+rotation = -1.5707964
+scale = Vector2(0.18996453, 0.18996453)
+texture = SubResource("AtlasTexture_66us3")

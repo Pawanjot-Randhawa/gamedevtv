@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://wj7f43hg72gd" path="res://Pickups/Upgrades/player_upgrade.tscn" id="6_6wlh6"]
 [ext_resource type="PackedScene" uid="uid://cui5dche5q4g2" path="res://Enemies/Seeker.tscn" id="7_6wlh6"]
 [ext_resource type="PackedScene" uid="uid://b3xldxg7vkmhj" path="res://Enemies/windmill.tscn" id="8_r7cm4"]
+[ext_resource type="PackedScene" uid="uid://dvh7tdg5q7s1y" path="res://Enemies/shooter.tscn" id="9_jr5jw"]
+[ext_resource type="PackedScene" uid="uid://d2tiyuo7w80n5" path="res://Enemies/wave_shooter.tscn" id="10_ebtct"]
 
 [node name="level" type="Node2D" unique_id=1512950284]
 
@@ -118,3 +120,9 @@ position = Vector2(180, 557)
 
 [node name="Windmill" parent="." unique_id=2053049337 instance=ExtResource("8_r7cm4")]
 position = Vector2(237, -137)
+
+[node name="Shooter" parent="." unique_id=1048163147 instance=ExtResource("9_jr5jw")]
+position = Vector2(417, -32)
+
+[node name="wave_shooter" parent="." unique_id=1525817627 instance=ExtResource("10_ebtct")]
+position = Vector2(-422, 6)

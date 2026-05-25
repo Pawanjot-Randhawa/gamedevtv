@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://2yviwvi821rn"]
 
 [ext_resource type="Script" uid="uid://hhp5fbfxk4ed" path="res://Guns/Deluxe/flame_deluxe.gd" id="1_5kt83"]
+[ext_resource type="Texture2D" uid="uid://dyar7atrcswwg" path="res://assets/Flamethrower2.png" id="2_w7q86"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_y3ma2"]
 size = Vector2(40, 20)
@@ -18,7 +19,15 @@ size = Vector2(40, 10)
 size = Vector2(120, 160)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tuesx"]
-size = Vector2(120, 160)
+size = Vector2(368, 444)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuesx"]
+atlas = ExtResource("2_w7q86")
+region = Rect2(369, 185, 136, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8p30"]
+atlas = ExtResource("2_w7q86")
+region = Rect2(368, 198, 56, 18)
 
 [node name="flame_deluxe" type="Node2D" unique_id=216699577]
 script = ExtResource("1_5kt83")
@@ -48,7 +57,8 @@ mesh = SubResource("QuadMesh_y8p30")
 
 [node name="FireVisual" type="MeshInstance2D" parent="." unique_id=1641272646]
 modulate = Color(0.9384307, 0, 0.10741279, 1)
-position = Vector2(0, -110)
+position = Vector2(-1, -329.5)
+scale = Vector2(3.0833333, 2.78125)
 mesh = SubResource("QuadMesh_w7q86")
 
 [node name="FireArea" type="Area2D" parent="." unique_id=298163862]
@@ -57,7 +67,30 @@ collision_mask = 8
 monitorable = false
 
 [node name="FireCollisson" type="CollisionShape2D" parent="FireArea" unique_id=1382643195]
-position = Vector2(0, -110)
+position = Vector2(0, -329)
 shape = SubResource("RectangleShape2D_tuesx")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1923053325]
+position = Vector2(0, -53)
+rotation = -1.5707964
+scale = Vector2(0.2662731, 0.26627314)
+texture = ExtResource("2_w7q86")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=204185678]
+position = Vector2(-10.999998, -89)
+rotation = -1.5707964
+scale = Vector2(0.26666674, 0.26666668)
+texture = SubResource("AtlasTexture_tuesx")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1992925425]
+position = Vector2(13, -89)
+rotation = -1.5707964
+scale = Vector2(0.26666674, 0.26666668)
+texture = SubResource("AtlasTexture_tuesx")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1242041692]
+position = Vector2(1.0000002, -71.99999)
+scale = Vector2(0.53571427, 0.26666668)
+texture = SubResource("AtlasTexture_y8p30")
 
 [connection signal="body_entered" from="FireArea" to="." method="_on_fire_area_body_entered"]

@@ -1,22 +1,25 @@
 [gd_scene format=3 uid="uid://wj7f43hg72gd"]
 
 [ext_resource type="Script" uid="uid://dcqhfn3gn0ne8" path="res://Pickups/Upgrades/player_upgrade.gd" id="1_rm2jh"]
-
-[sub_resource type="QuadMesh" id="QuadMesh_w6jbp"]
-size = Vector2(30, 30)
+[ext_resource type="Texture2D" uid="uid://b6kojg64s3i1k" path="res://assets/sheet.svg" id="2_jf73d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rm2jh"]
-size = Vector2(30, 30)
+size = Vector2(40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gaxhv"]
+atlas = ExtResource("2_jf73d")
+region = Rect2(2040, 995, 166, 165)
 
 [node name="PlayerUpgrade" type="Area2D" unique_id=1834820325]
 collision_mask = 2
 script = ExtResource("1_rm2jh")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=743571300]
-modulate = Color(0.34074172, 0.5625997, 9.62615e-07, 1)
-mesh = SubResource("QuadMesh_w6jbp")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=810378396]
 shape = SubResource("RectangleShape2D_rm2jh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=269906624]
+position = Vector2(1.0728836e-06, 0)
+scale = Vector2(0.24242423, 0.24242423)
+texture = SubResource("AtlasTexture_gaxhv")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

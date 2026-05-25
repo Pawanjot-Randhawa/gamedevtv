@@ -2,6 +2,7 @@ extends Node
 
 signal player_health_change
 signal upgrade_menu_on(on:bool)
+signal first_pickup
 
 signal burn_tick
 signal saw_tick
@@ -13,7 +14,7 @@ var player:Player = null
 var upgrade_ui:Upgrade_UI = null
 
 var bullets: Node = null
-
+var first_picked:bool = false
 
 func _on_burn_timer_timeout() -> void:
 	burn_tick.emit()

@@ -1,9 +1,26 @@
 [gd_scene format=3 uid="uid://bylp2tvf6hcn4"]
 
 [ext_resource type="Script" uid="uid://cxkl2gb2n888k" path="res://floor.gd" id="1_cgngl"]
+[ext_resource type="PackedScene" uid="uid://cui5dche5q4g2" path="res://Enemies/Seeker.tscn" id="2_36s4f"]
 [ext_resource type="PackedScene" uid="uid://byque4w54oowj" path="res://Player/player.tscn" id="2_wd3ws"]
+[ext_resource type="PackedScene" uid="uid://b3xldxg7vkmhj" path="res://Enemies/windmill.tscn" id="3_v5cjn"]
+[ext_resource type="PackedScene" uid="uid://dvh7tdg5q7s1y" path="res://Enemies/shooter.tscn" id="4_ce06e"]
+[ext_resource type="PackedScene" uid="uid://d2tiyuo7w80n5" path="res://Enemies/wave_shooter.tscn" id="5_2jbdd"]
+[ext_resource type="PackedScene" uid="uid://4fn0r0cy5akp" path="res://Pickups/Gun/gun_pickup.tscn" id="7_v5cjn"]
 
-[node name="Floor" type="Node2D" unique_id=1265474446]
+[node name="Floor" type="Node2D" unique_id=1265474446 node_paths=PackedStringArray("player")]
 script = ExtResource("1_cgngl")
+enemy_scenes = Array[PackedScene]([ExtResource("2_36s4f"), ExtResource("3_v5cjn"), ExtResource("4_ce06e"), ExtResource("5_2jbdd")])
+player = NodePath("Player")
 
 [node name="Player" parent="." unique_id=1991989628 instance=ExtResource("2_wd3ws")]
+
+[node name="Enimies" type="Node2D" parent="." unique_id=1652961743]
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=949590049]
+wait_time = 7.0
+
+[node name="GunPickup" parent="." unique_id=684247242 instance=ExtResource("7_v5cjn")]
+position = Vector2(-7, 189)
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

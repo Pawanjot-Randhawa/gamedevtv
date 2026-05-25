@@ -1,6 +1,7 @@
 extends CharacterBody2D
 class_name Player
 @onready var camera_2d: Camera2D = $Camera2D
+@onready var regen_timer: Timer = $RegenTimer
 
 var zoomX: float = 1.0:
 	set(value):
@@ -62,3 +63,7 @@ func upgrade(upgrade: String):
 		HEALTH += 50
 	elif upgrade == "Regen":
 		REGEN_AMOUNT += 10
+
+
+func _on_regen_timer_timeout() -> void:
+	HEALTH += REGEN_AMOUNT

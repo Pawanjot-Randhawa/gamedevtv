@@ -1,47 +1,13 @@
 [gd_scene format=3 uid="uid://j5ylltbkvldv"]
 
 [ext_resource type="Script" uid="uid://jh8mrxa17mjo" path="res://root.gd" id="1_pq8q7"]
-[ext_resource type="PackedScene" uid="uid://bffs0yqr2jdrx" path="res://assemblyArea/level.tscn" id="2_pyidc"]
 [ext_resource type="PackedScene" uid="uid://bfqjgr2yf60tg" path="res://UI/upgrade_ui.tscn" id="3_vvh5c"]
 [ext_resource type="PackedScene" uid="uid://cd1rnjp6gf8wp" path="res://UI/player_ui.tscn" id="4_28aoi"]
+[ext_resource type="PackedScene" uid="uid://bylp2tvf6hcn4" path="res://floor.tscn" id="4_jnlp7"]
+[ext_resource type="AudioStream" uid="uid://bswvhw60b8htj" path="res://assets/bg.mp3" id="5_jnlp7"]
 
 [node name="root" type="Node" unique_id=1686647730]
 script = ExtResource("1_pq8q7")
-
-[node name="level" parent="." unique_id=1512950284 instance=ExtResource("2_pyidc")]
-
-[node name="Seeker" parent="level" index="28" unique_id=1159179518]
-speed = 150.0
-
-[node name="Seeker2" parent="level" index="29" unique_id=1208052802]
-speed = 150.0
-
-[node name="Seeker3" parent="level" index="30" unique_id=303426627]
-speed = 150.0
-
-[node name="Seeker4" parent="level" index="31" unique_id=405905250]
-speed = 150.0
-
-[node name="Seeker5" parent="level" index="32" unique_id=2064099763]
-speed = 150.0
-
-[node name="Seeker6" parent="level" index="33" unique_id=1551360705]
-speed = 150.0
-
-[node name="Seeker7" parent="level" index="34" unique_id=1275828131]
-speed = 150.0
-
-[node name="Seeker8" parent="level" index="35" unique_id=978673893]
-speed = 150.0
-
-[node name="Seeker9" parent="level" index="36" unique_id=856163666]
-speed = 150.0
-
-[node name="Seeker10" parent="level" index="37" unique_id=634377138]
-speed = 150.0
-
-[node name="Seeker11" parent="level" index="38" unique_id=1187432900]
-speed = 150.0
 
 [node name="Bullets" type="Node" parent="." unique_id=657475136]
 
@@ -51,4 +17,11 @@ speed = 150.0
 
 [node name="player_ui" parent="CanvasLayer" unique_id=1343201078 instance=ExtResource("4_28aoi")]
 
-[editable path="level"]
+[node name="Floor" parent="." unique_id=1265474446 instance=ExtResource("4_jnlp7")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=744630768]
+stream = ExtResource("5_jnlp7")
+volume_db = -30.0
+autoplay = true
+
+[editable path="Floor"]

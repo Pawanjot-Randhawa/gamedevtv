@@ -14,7 +14,7 @@ var FLAMEBULLET_DAMAGE = 30 # 70 over 2 seconds, 35 DPS
 #BULLET fire once a second
 var BULLET_DAMAGE = 24 # 24 DPS
 #DELUXE Bullet spawns 3
-var DELUXE_BULLET_DAMAGE = 14 # 42 DPS if you hit all 3 shots
+var DELUXE_BULLET_DAMAGE = 15 # 45 DPS if you hit all 3 shots
 
 #GAME STATE
 var KILLS:int = 0

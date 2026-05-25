@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://dfhvrmll28alk"]
 
 [ext_resource type="Script" uid="uid://brck2fyasc5wc" path="res://flame_pickup.gd" id="1_h5qbh"]
-[ext_resource type="Texture2D" uid="uid://cwgjm8xqjkuff" path="res://assets/Flamethrower.png" id="2_dvefx"]
+[ext_resource type="Texture2D" uid="uid://dyar7atrcswwg" path="res://assets/Flamethrower2.png" id="2_dvefx"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_dvefx"]
 size = Vector2(50, 50)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ptca"]
-size = Vector2(125, 50)
+size = Vector2(101, 45)
 
 [node name="flame_pickup" type="Area2D" unique_id=2134229557]
 collision_mask = 4
@@ -15,12 +15,12 @@ script = ExtResource("1_h5qbh")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=756760465]
 modulate = Color(0, 0, 0, 0.20784314)
-position = Vector2(7, 0)
-scale = Vector2(2.52, 1)
+position = Vector2(7, 0.5000002)
+scale = Vector2(1.9999999, 0.9)
 mesh = SubResource("QuadMesh_dvefx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1890632057]
-position = Vector2(7.5, 0)
+position = Vector2(7.5, 0.5)
 shape = SubResource("RectangleShape2D_1ptca")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=757391095]

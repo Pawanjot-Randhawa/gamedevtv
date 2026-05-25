@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var SPEED: int = 250
+@export var SPEED: int = 150
 @export var rotate_speed: int = 3
 @onready var saw_sprite: Sprite2D = $"Sprite2D"
 
